@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/button.dart';
+import 'package:flutter_learn_app/checkbox.dart';
 import 'package:flutter_learn_app/image.dart';
 import 'package:flutter_learn_app/state_manage.dart';
 import 'package:flutter_learn_app/text.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         "textRoute": (context) => TextDemo(),
         "buttonRoute": (context) => ButtonDemo(),
         "imageRoute": (context) => ImageDemo(),
+        "checkRoute": (context) => CheckBoxDemo(),
       },
     );
   }
@@ -94,6 +96,11 @@ class _MyHomePageState extends State<MyHomePage> {
               Navigator.pushNamed(context, "imageRoute");
             },
             child: Text("imageRoute"),
+          ), RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "checkRoute");
+            },
+            child: Text("checkRoute"),
           ),
         ],
       ),
