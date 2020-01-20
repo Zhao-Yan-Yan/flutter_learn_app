@@ -28,7 +28,8 @@ class _CheckBoxState extends State<CheckBoxDemo>{
             setState(() {
               isSwitchCheck = value;
             });
-          })
+          }),
+          
         ],
       ),
     );

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/button.dart';
 import 'package:flutter_learn_app/checkbox.dart';
+import 'package:flutter_learn_app/form.dart';
 import 'package:flutter_learn_app/image.dart';
+import 'package:flutter_learn_app/progress.dart';
 import 'package:flutter_learn_app/state_manage.dart';
 import 'package:flutter_learn_app/text.dart';
+import 'package:flutter_learn_app/textfield.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,6 +29,9 @@ class MyApp extends StatelessWidget {
         "buttonRoute": (context) => ButtonDemo(),
         "imageRoute": (context) => ImageDemo(),
         "checkRoute": (context) => CheckBoxDemo(),
+        "textFieldRoute": (context) => TextFieldDemo(),
+        "formTestRoute": (context) => FormTestRoute(),
+        "progressRoute": (context) => ProgressDemo(),
       },
     );
   }
@@ -96,11 +102,30 @@ class _MyHomePageState extends State<MyHomePage> {
               Navigator.pushNamed(context, "imageRoute");
             },
             child: Text("imageRoute"),
-          ), RaisedButton(
+          ),
+          RaisedButton(
             onPressed: () {
               Navigator.pushNamed(context, "checkRoute");
             },
             child: Text("checkRoute"),
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "textFieldRoute");
+            },
+            child: Text("textFieldRoute"),
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "formTestRoute");
+            },
+            child: Text("formTestRoute"),
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "progressRoute");
+            },
+            child: Text("progressRoute"),
           ),
         ],
       ),
